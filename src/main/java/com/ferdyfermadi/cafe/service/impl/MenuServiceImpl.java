@@ -68,6 +68,7 @@ public class MenuServiceImpl implements MenuService {
                 .name(request.getName())
                 .price(request.getPrice())
                 .image(image)
+                .mainCourse(request.getMainCourse())
                 .build();
 
         menuRepository.save(menu);
@@ -92,6 +93,7 @@ public class MenuServiceImpl implements MenuService {
 
         existing.setName(request.getName());
         existing.setPrice(request.getPrice());
+        existing.setMainCourse(request.getMainCourse());
         existing.setImage(image);
 
         return mapToResponse(menuRepository.save(existing));
@@ -145,6 +147,7 @@ public class MenuServiceImpl implements MenuService {
                 .id(m.getId())
                 .name(m.getName())
                 .price(m.getPrice())
+                .mainCourse(m.getMainCourse())
                 .imageUrl(m.getImage() != null ? m.getImage().getPath() : null)
                 .build();
     }

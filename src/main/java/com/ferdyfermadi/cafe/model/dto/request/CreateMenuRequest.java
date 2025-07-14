@@ -20,4 +20,6 @@ public class CreateMenuRequest {
 
     private MultipartFile image;
 
+    @NotBlank
+    private String mainCourse;
 }

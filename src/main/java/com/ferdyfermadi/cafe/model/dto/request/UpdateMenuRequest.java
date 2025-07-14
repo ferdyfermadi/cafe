@@ -17,4 +17,7 @@ public class UpdateMenuRequest {
     private Long price;
 
     private String imageId;
+
+    @NotBlank
+    private String mainCourse;
 }

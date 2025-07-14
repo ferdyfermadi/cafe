@@ -26,4 +26,7 @@ public class Menu {
     @JoinColumn(name = "image_id")
     private Image image;
 
+    @Column(name = "main_course", nullable = false)
+    private String mainCourse;
+
 }
