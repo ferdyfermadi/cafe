@@ -1,6 +1,7 @@
 package com.ferdyfermadi.cafe.model.entity;
 
 import com.ferdyfermadi.cafe.model.constants.ConstantTable;
+import com.ferdyfermadi.cafe.model.constants.MenuCategory;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,7 +27,8 @@ public class Menu {
     @JoinColumn(name = "image_id")
     private Image image;
 
-    @Column(name = "main_course", nullable = false)
-    private String mainCourse;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "category", nullable = false)
+    private MenuCategory category;
 
 }

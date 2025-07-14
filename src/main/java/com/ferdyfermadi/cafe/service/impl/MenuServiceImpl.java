@@ -1,5 +1,6 @@
 package com.ferdyfermadi.cafe.service.impl;
 
+import com.ferdyfermadi.cafe.model.constants.MenuCategory;
 import com.ferdyfermadi.cafe.model.dto.request.CreateMenuRequest;
 import com.ferdyfermadi.cafe.model.dto.request.UpdateMenuRequest;
 import com.ferdyfermadi.cafe.model.dto.request.SearchMenuRequest;
@@ -68,7 +69,7 @@ public class MenuServiceImpl implements MenuService {
                 .name(request.getName())
                 .price(request.getPrice())
                 .image(image)
-                .mainCourse(request.getMainCourse())
+                .category(request.getCategory())
                 .build();
 
         menuRepository.save(menu);
@@ -93,7 +94,7 @@ public class MenuServiceImpl implements MenuService {
 
         existing.setName(request.getName());
         existing.setPrice(request.getPrice());
-        existing.setMainCourse(request.getMainCourse());
+        existing.setCategory(request.getCategory());
         existing.setImage(image);
 
         return mapToResponse(menuRepository.save(existing));
@@ -147,7 +148,7 @@ public class MenuServiceImpl implements MenuService {
                 .id(m.getId())
                 .name(m.getName())
                 .price(m.getPrice())
-                .mainCourse(m.getMainCourse())
+                .category(m.getCategory())
                 .imageUrl(m.getImage() != null ? m.getImage().getPath() : null)
                 .build();
     }

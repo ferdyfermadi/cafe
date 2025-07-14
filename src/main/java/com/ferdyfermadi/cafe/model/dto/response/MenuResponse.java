@@ -1,5 +1,6 @@
 package com.ferdyfermadi.cafe.model.dto.response;
 
+import com.ferdyfermadi.cafe.model.constants.MenuCategory;
 import lombok.*;
 
 @Getter
@@ -12,6 +13,6 @@ public class MenuResponse {
     private String name;
     private Long price;
     private String imageUrl;
-    private String mainCourse;
+    private MenuCategory category;
 }
 

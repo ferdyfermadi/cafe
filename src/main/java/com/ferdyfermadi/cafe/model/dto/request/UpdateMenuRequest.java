@@ -1,7 +1,9 @@
 package com.ferdyfermadi.cafe.model.dto.request;
 
+import com.ferdyfermadi.cafe.model.constants.MenuCategory;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Getter
@@ -18,6 +20,6 @@ public class UpdateMenuRequest {
 
     private String imageId;
 
-    @NotBlank
-    private String mainCourse;
+    @NotNull
+    private MenuCategory category;
 }

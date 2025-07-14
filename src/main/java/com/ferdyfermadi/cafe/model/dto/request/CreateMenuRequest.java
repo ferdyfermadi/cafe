@@ -1,5 +1,6 @@
 package com.ferdyfermadi.cafe.model.dto.request;
 
+import com.ferdyfermadi.cafe.model.constants.MenuCategory;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -20,6 +21,6 @@ public class CreateMenuRequest {
 
     private MultipartFile image;
 
-    @NotBlank
-    private String mainCourse;
+    @NotNull
+    private MenuCategory category;
 }
