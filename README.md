@@ -27,8 +27,8 @@ src/
 ## ⚙️ Konfigurasi `.properties`
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/cafe  
-spring.datasource.username=postgres  
-spring.datasource.password=ytffgaming  
+spring.datasource.username="YOUR USERNAME"  
+spring.datasource.password="YOUR PASSWORD"  
 spring.jpa.hibernate.ddl-auto=update  
 ```
 
